@@ -14,11 +14,11 @@ interface MenuDetails {
 
 export default function App() {
   const [menudetails, setMenuDetails] = useState<MenuDetails[]>([]);
-  const [dishName, setDishName]
-  const [description,setDescription]
-  const [dishType,setDishType]
-  const [price,setPrice]
-  const dishType = ['Appertiesers','Beverages','Desserts','Main Courses'];
+  const [dishName, setDishName] = useState<string>('')
+  const [description,setDescription]= useState<string>('')
+  const [dishType,setDishType]= useState<string>('')
+  const [price,setPrice]= useState<string>('')
+  const dishTypes = ['Appertiesers','Beverages','Desserts','Main Courses'];
 
   const handleSubmit = () => {
     if (dishName && description && dishType && price) {
@@ -117,7 +117,7 @@ export default function App() {
 const styles= StyleSheet.create({
   container:{
     flex:1,
-    backgroundColor: ''
+    backgroundColor: '#ff6a6a'
     padding:20,
   },
 
@@ -129,7 +129,7 @@ const styles= StyleSheet.create({
   trackerName: {
     fontSize :24,
     fontWeight:'bold'
-    color:''
+    color:'#e4e7f3'
   },
 
   input:{
@@ -144,7 +144,7 @@ const styles= StyleSheet.create({
   },
 
   button:{
-    backgroundColor: '',
+    backgroundColor: '#04c4e8',
     padding: 10,
     borderRadius:5,
     alignItems:'center',
@@ -158,16 +158,16 @@ const styles= StyleSheet.create({
   itemContainer: {
     padding:10,
     borderWidth:1,
-    borderColor:'',
+    borderColor:'#000000',
   },
 
   itemText:{
     fontSize:16,
-    color:'',
+    color:'#f2efef',
   },
 
   removeItemButton: {
-    backgroundColor:'',
+    backgroundColor:'#04c4e8',
     padding:5,
     alignItems: 'center',
   },
